@@ -33,7 +33,7 @@ function init() {
     let markerType = "marker";
     let markerRadius = 100;
    
-    for (let row in data) {
+    for (let row = 0; row < data.length; row++)  {
         let marker;
         marker = L.marker([data[row].lat, data[row].lon]);
     marker.addTo(pointGroupLayer);

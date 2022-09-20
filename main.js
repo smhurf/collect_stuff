@@ -18,7 +18,6 @@ function init() {
     attribution: '© OpenStreetMap'
  }).addTo(map);
 
-
   //Parse google sheets
   Papa.parse(pointsURL, {
       download: true,
@@ -40,26 +39,5 @@ function init() {
     marker.addTo(pointGroupLayer);
     marker.bindPopup('<h2>' + data[row].Name + '</h2><p>Email: '+ data[row].Email + '<br>URL: ' + data[row].URL + '</br> <br>Items : ' + data[row].Items + '</br><br>Details of items to be collected: ' + data[row].Notes + '</br><br>Photo references: ' + data[row].References + '</br><br>Collection Method: ' + data[row].How + '</br><br>Address: ' + data[row].Address + '</br><br>Postal Code: ' + data[row].PostalCode + '</br><br>Any other info: ' + data[row].Remarks + '</br><br>Collection End Date: ' + data[row].End + '</br></p>') ;
 
-    //   // UNCOMMENT THIS LINE TO USE POPUPS
-    //   marker.bindPopup('<h2>' + data[row].name + '</h2>');
-
-      // COMMENT THE NEXT GROUP OF LINES TO DISABLE SIDEBAR FOR THE MARKERS
-      // marker.feature = {
-      //   properties: {
-      //     name: data[row].name,
-      //     description: data[row].description,
-      //   },
-      // };
-      // marker.on({
-      //   click: function (e) {
-      //     L.DomEvent.stopPropagation(e);
-      //     document.getElementById("sidebar-title").innerHTML =
-      //       e.target.feature.properties.name;
-      //     document.getElementById("sidebar-content").innerHTML =
-      //       e.target.feature.properties.description;
-      //     sidebar.open(panelID);
-      //   },
-      // });
-      // COMMENT UNTIL HERE TO DISABLE SIDEBAR FOR THE MARKERS
     }
   }

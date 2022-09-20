@@ -4,7 +4,7 @@
  */
  // URL for points CSV download
  let pointsURL =
- "https://docs.google.com/spreadsheets/d/e/2PACX-1vSBA3Di-J9fmW82NdqIogniXwoZe_87w2fL40gbKgG7y3p8BTg2UmvIXONdnyZquPSGREbFdWP7Z-5B/pub?output=csv";
+ "https://docs.google.com/spreadsheets/d/e/2PACX-1vSBA3Di-J9fmW82NdqIogniXwoZe_87w2fL40gbKgG7y3p8BTg2UmvIXONdnyZquPSGREbFdWP7Z-5B/pub?gid=930695825&single=true&output=csv";
 
 window.addEventListener("DOMContentLoaded", init);
 

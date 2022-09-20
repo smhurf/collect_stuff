@@ -27,24 +27,32 @@ function init() {
   }
 
   function addPoints(data) {
-   for (var row in data) {
-    var marker = L.marker([
-      data[row].Latitude,
-      data[row].Longitude
-    ]).addTo(map);
-    marker.bindPopup('<h2>' + data[row].Name + '</h2><p>Email: '+ data[row].Email + '<br>URL: ' + data[row].URL + '</br> <br>Items : ' + data[row].Items + '</br><br>Details of items to be collected: ' + data[row].Notes + '</br><br>Photo references: ' + data[row].References + '</br><br>Collection Method: ' + data[row].How + '</br><br>Address: ' + data[row].Address + '</br><br>Postal Code: ' + data[row].PostalCode + '</br><br>Any other info: ' + data[row].Remarks + '</br><br>Collection End Date: ' + data[row].End + '</br></p>') ;
-    
-//     data = data.data;
-//     //create a layer group to add the points to
-//     let pointGroupLayer = L.layerGroup().addTo(map);
-//     let markerType = "marker";
-//     let markerRadius = 100;
-
-//     for (let row = 0; row < data.length; row++) {
-//         let marker;
-//         marker = L.marker([data[row].lat, data[row].lon]);
-//     marker.addTo(pointGroupLayer);
+//    for (var row in data) {
+//     var marker = L.marker([
+//       data[row].Latitude,
+//       data[row].Longitude
+//     ]).addTo(map);
 //     marker.bindPopup('<h2>' + data[row].Name + '</h2><p>Email: '+ data[row].Email + '<br>URL: ' + data[row].URL + '</br> <br>Items : ' + data[row].Items + '</br><br>Details of items to be collected: ' + data[row].Notes + '</br><br>Photo references: ' + data[row].References + '</br><br>Collection Method: ' + data[row].How + '</br><br>Address: ' + data[row].Address + '</br><br>Postal Code: ' + data[row].PostalCode + '</br><br>Any other info: ' + data[row].Remarks + '</br><br>Collection End Date: ' + data[row].End + '</br></p>') ;
+    
+    data = data.data;
+    //create a layer group to add the points to
+    let pointGroupLayer = L.layerGroup().addTo(map);
+    let markerType = "marker";
+    let markerRadius = 100;
+
+    if (markerType == "circleMarker") {
+      marker = L.circleMarker([data[row].lat, data[row].lon], {
+        radius: markerRadius,
+      });
+    } else if (markerType == "circle") {
+      marker = L.circle([data[row].lat, data[row].lon], {
+        radius: markerRadius,
+      });
+    } else {
+      marker = L.marker([data[row].lat, data[row].lon]);
+    }
+    marker.addTo(pointGroupLayer);
+    marker.bindPopup('<h2>' + data[row].Name + '</h2><p>Email: '+ data[row].Email + '<br>URL: ' + data[row].URL + '</br> <br>Items : ' + data[row].Items + '</br><br>Details of items to be collected: ' + data[row].Notes + '</br><br>Photo references: ' + data[row].References + '</br><br>Collection Method: ' + data[row].How + '</br><br>Address: ' + data[row].Address + '</br><br>Postal Code: ' + data[row].PostalCode + '</br><br>Any other info: ' + data[row].Remarks + '</br><br>Collection End Date: ' + data[row].End + '</br></p>') ;
 
 //     }
    }

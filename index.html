@@ -29,16 +29,18 @@
         width: 30%; 
         height: 500px;
         float: left;
-        overflow:scroll;
+        overflow-y:scroll;
     }
-    
+    .full-height{
+        height:100%;
+    }
   </style>
 </head>
 
 <body>
   <div style="width: 100%;">
    <div id="map" class = "bw" ></div>
-   <div id="ff-compose" ></div>
+   <div id="ff-compose" class = "full-height"></div>
    <script async defer src="https://formfacade.com/include/111768066991324322282/form/1FAIpQLSc5sfajt5aurJKa4j9p9bwegKwTLREEnxeubgxGl8h4TRCHqA/classic.js?div=ff-compose"></script>
    </div>
    <script src="js/papaparse.min.js"></script>

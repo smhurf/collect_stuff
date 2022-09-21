@@ -25,34 +25,16 @@
       .bw {
         filter: grayscale(100%);
       }
-    .float-container {
-    border: 3px solid #fff;
-    padding: 20px;
-    }
-
-    .float-child {
-        width: 50%;
-        float: left;
-        padding: 20px;
-        border: 2px solid red;
-    }  
-
+    
   </style>
 </head>
 
 <body>
-  <div class="float-container">
-
-  <div class="float-child">
-    <div id="map" class = "bw"></div>
-  </div>
-  
-  <div class="float-child">
-    <div id="ff-compose"></div>
-  <script async defer src="https://formfacade.com/include/111768066991324322282/form/1FAIpQLSc5sfajt5aurJKa4j9p9bwegKwTLREEnxeubgxGl8h4TRCHqA/classic.js?div=ff-compose"></script>
-  </div>
-  
-</div>
+  <div style="width: 100%;">
+   <div id="map" class = "bw" style="width: 50%; height: 100px; float: left;"></div>
+   <div id="ff-compose" style="margin-left: 50%; height: 100px;"></div>
+   <script async defer src="https://formfacade.com/include/111768066991324322282/form/1FAIpQLSc5sfajt5aurJKa4j9p9bwegKwTLREEnxeubgxGl8h4TRCHqA/classic.js?div=ff-compose"></script>
+   </div>
    <script src="js/papaparse.min.js"></script>
    <script src="main.js"></script>
 </body>

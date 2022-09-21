@@ -12,7 +12,7 @@ let map;
 
 function init() {
   // Create map
-  map = L.map('map').setView([1.365, 103.7912], 12);
+  map = L.map('map').setView([1.365, 103.8012], 12);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'

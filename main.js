@@ -37,7 +37,7 @@ function init() {
         let marker;
         marker = L.marker([data[row].lat, data[row].lon]);
     marker.addTo(pointGroupLayer);
-    marker.bindPopup('<h2>' + data[row].Name + '</h2><p>Email: '+ data[row].Email + '</p><p><b>URL/Social Media:</b>' + data[row].URL + '</p><p><b>Items :</b> ' + data[row].Items + '</p> <p><b>IDetails of items to be collected:/b> ' + data[row].Notes + '</p> <p><b>IPhoto references: </b>' + data[row].References + '</p> <p><b>Collection Method: </b>' + data[row].How + '</p> <p><b>Address: </b>' + data[row].Address + '</p> <p><b>Postal Code: </b>' + data[row].PostalCode + '</p> <p><b>Any other info: </b>' + data[row].Remarks + '</p> <p><b>Collection End Date: </b>' + data[row].End + '</p>') ;
+    marker.bindPopup('<strong>' + data[row].Name + '</strong><p>Email: '+ data[row].Email + '</p><p><b>URL/Social Media:</b>' + data[row].URL + '</p><p><b>Items :</b> ' + data[row].Items + '</p> <p><b>IDetails of items to be collected:/b> ' + data[row].Notes + '</p> <p><b>IPhoto references: </b>' + data[row].References + '</p> <p><b>Collection Method: </b>' + data[row].How + '</p> <p><b>Address: </b>' + data[row].Address + '</p> <p><b>Postal Code: </b>' + data[row].PostalCode + '</p> <p><b>Any other info: </b>' + data[row].Remarks + '</p> <p><b>Collection End Date: </b>' + data[row].End + '</p>') ;
 
 //    }
    }
